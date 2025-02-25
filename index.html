@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculators</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .box{
+            background-color: bisque;
+            height: 250px;
+            width: 250px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        button{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(12, 224, 136);
+
+        }
+        button:hover{
+            background-color: lightgreen;
+            transform: scale(1.05);
+        }
+        #num1,#num2{
+            height: 25px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Basic Calculators</h2><br>
+            <input type="number" placeholder="Enter number" id="num1"><br><br>
+            <input type="number" placeholder="Enter number" id="num2"><br><br>
+            <button onclick="plus()">+</button>
+            <button onclick="minus()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="divide()">/</button>
+        </div>
+    </div>
+    <script>
+        function plus(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sum = a + b;
+            alert(sum);
+            num1.value = '';
+            num2.value = '';
+        }
+
+        function minus(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sum = a - b;
+            alert(sum);
+            num1.value = '';
+            num2.value = '';
+        }
+
+        function multiply(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sum = a * b;
+            alert(sum);
+            num1.value = '';
+            num2.value = '';
+        }
+
+        function divide(){
+            let a = parseInt(num1.value);
+            let b = parseInt(num2.value);
+            let sum = a / b;
+            alert(sum);
+            num1.value = '';
+            num2.value = '';
+        }
+
+    </script>
+    
+</body>
+</html>
